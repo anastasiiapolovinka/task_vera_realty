@@ -1,0 +1,257 @@
+/* reset css */
+html, body, div, span, h1, p,
+a, article, header, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+@font-face {
+   font-family: "Rawline";
+   src: url(./public/rawline-400.ttf);
+}
+@font-face {
+   font-family: "Rawline Medium";
+   src: url(./public/rawline-600.ttf);
+}
+* {
+   box-sizing: border-box;
+}
+body {
+   font-family: "Rawline";
+   font-size: 18px;
+	line-height: 1;
+   padding-bottom: 44px;
+}
+a {
+   text-decoration: none;
+   color: #000;
+}
+a:hover, a:active {
+   color: #FF6E1F;;
+}
+
+/* utils */
+.container {
+   display: flex;
+   max-width: 1600px;
+   width: 100%;
+   padding: 0 14px;
+}
+.w_full {
+   width: 100%;
+}
+.bold {
+   font-family: "Rawline Medium";
+}
+
+ /* main */
+header, main {
+   display: flex;
+   justify-content: center;
+   border-bottom: 1px solid #000;
+}
+h1 {
+   font-size: 40px;
+   line-height: 50px;
+}
+p {
+   font-size: 20px;
+   line-height: 40px;
+}
+.nav {
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 0;
+}
+.nav_btn {
+   padding: 6px 17px;
+}
+.burger {
+   height: 16px;
+   width: 16px;
+}
+.burger > svg {
+   stroke: #000;
+}
+.burger:hover > svg {
+   stroke: #FF6E1F;
+}
+.burger:hover .dropdown {
+   display: block;
+}
+.dropdown {
+   position: absolute;
+   z-index: 1;
+   top: 51px;
+   display: none;
+   padding: 10px;
+   background-color: #FF6E1F;
+}
+.contacts {
+   display: flex;
+   gap: 13px;
+}
+.icon {
+   width: 16px;
+   height: 16px;
+}
+.icon > img {
+   max-width: 100%;
+}
+.btn {
+   display: flex;
+   align-items: center;
+   background-color: #000;
+   color: #fff;
+}
+.main {
+   padding-bottom: 54px;
+}
+.content_wrapper {
+   flex-direction: column;
+   align-items: center;
+}
+.content {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   width: 100%;
+   gap: 20px;
+   padding: 54px 0;
+}
+.image > img {
+   max-width: 100%;
+}
+.donate_btn {
+   padding: 10px 30px;
+   font-size: 18px;
+   height: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+   body {
+      padding-bottom: 54px;
+   }
+   .nav {
+      padding: 22px 0;
+   }
+   .burger {
+      height: 36px;
+      width: 36px;
+   }
+   .dropdown {
+      top: 81px;
+   }
+   .nav_btn {
+      padding: 11px 17px;
+   }
+   .contacts {
+      gap: 28px;
+   }
+   .icon {
+      height: 30px;
+      width: 30px;
+   }
+   .content {
+      max-width: 600px;
+      padding: 80px 0;
+      align-items: center;
+      gap: 30px;
+      text-align: center;
+   }
+   h1 {
+      font-size: 48px;
+      line-height: 58px;
+      padding: 0 40px;
+   }
+   p {
+      font-size: 24px;
+      line-height: 44px;
+   }
+   .donate_btn {
+      height: 45px;
+      padding: 10px 50px;
+   }
+}
+
+@media only screen and (min-width: 992px) {
+   .burger {
+      order: 2;
+   }
+   .burger > svg {
+      display: none;
+   }
+   .dropdown {
+      position: static;
+      display: block;
+      background: none;
+   }
+   .nav_btn {
+      order: 1;
+   }
+   .contacts {
+      order: 3;
+   }
+   .content {
+      max-width: 850px;
+      padding: 120px 0;
+   }
+   h1 {
+      font-size: 60px;
+      line-height: 70px;
+      padding: 0 100px;
+   }
+   p {
+      font-size: 32px;
+      line-height: 52px;
+   }
+   .donate_btn {
+      height: 54px;
+      padding: 10px 52px;
+   }
+}
+
+@media only screen and (min-width: 1401px) {
+   body {
+      padding-bottom: 12px;
+   }
+   .content_wrapper {
+      flex-direction: row;
+      justify-content: end;
+      align-items: flex-start;
+      max-width: 1920px;
+   }
+   .content {
+      width: 49%;
+      max-width: 800px;
+      align-items: flex-start;
+      padding: 313px 60px 313px 14px;
+      border-right: 1px solid #000;
+      text-align: left;
+   }
+   .image {
+      max-width: 49%;
+      padding: 54px 0 54px 14px;
+   }
+   .image > img {
+      width: 100%;
+      max-width: 932px;
+   }
+   h1 {
+      padding: 0;
+      max-width: 636px;
+   }
+   .donate_btn {
+      padding: 10px 47px;
+      font-size: 24px;
+   }
+   .main {
+      padding: 0;
+   }
+}
